@@ -4,6 +4,8 @@ members = [
     "core/cue-core",
     "core/download-core",
     "core/runtime-manager",
+    "core/ai-orchestrator",
+    "dsp/audio-dsp",
 ]
 
 [workspace.package]

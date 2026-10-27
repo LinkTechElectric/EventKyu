@@ -162,6 +162,7 @@ impl CueEngineHandle {
     }
 
     /// Adds an audio, video, or wait cue and returns its stable string ID.
+    #[allow(clippy::too_many_arguments)] // UniFFI 边界：参数即跨语言契约，保持平铺
     pub fn add_cue(
         &self,
         kind: CueKind,

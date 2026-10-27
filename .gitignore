@@ -1,0 +1,51 @@
+# Rust
+/target/
+**/*.rs.bk
+Cargo.lock.bak
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Xcode
+build/
+DerivedData/
+*.xcuserdata
+xcuserdata/
+*.xccheckout
+*.xcscmblueprint
+*.xcuserstate
+*.xcworkspace/xcuserdata/
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# Swift Package Manager
+.build/
+.swiftpm/
+Package.resolved
+
+# Tauri / Node
+apps/**/dist/
+apps/**/dist-ssr/
+node_modules/
+*.local
+
+# 运行时下载的组件（不进入版本库）
+runtime/
+**/runtime-cache/
+
+# 密钥与本地配置（安全红线：任何 Key 不进 git）
+*.env
+.env*
+!.env.example
+**/*secret*
+**/*apikey*
+**/LocalConfig.xcconfig
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo

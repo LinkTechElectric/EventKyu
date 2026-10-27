@@ -1,0 +1,14 @@
+[package]
+name = "download-core"
+version.workspace = true
+edition = "2021"
+license.workspace = true
+repository.workspace = true
+authors.workspace = true
+description = "EventKyu media resolution and download orchestration"
+
+[lib]
+name = "download_core"
+path = "src/lib.rs"
+
+[dependencies]

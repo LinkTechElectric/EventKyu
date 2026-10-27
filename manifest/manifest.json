@@ -1,0 +1,224 @@
+{
+  "components": [
+    {
+      "id": "yt-dlp",
+      "name": "yt-dlp",
+      "version": "2026.10.21",
+      "license": "Unlicense",
+      "distribution": "bundled",
+      "eula_required": false,
+      "platforms": {
+        "macos-aarch64": {
+          "url": "https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp_macos",
+          "sha256": "TO_PIN",
+          "size_bytes": 0,
+          "mirrors": [],
+          "version_args": ["--version"],
+          "file_name": "yt-dlp"
+        },
+        "macos-x86_64": {
+          "url": "https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp_macos",
+          "sha256": "TO_PIN",
+          "size_bytes": 0,
+          "mirrors": [],
+          "version_args": ["--version"],
+          "file_name": "yt-dlp"
+        },
+        "windows-x86_64": {
+          "url": "https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp.exe",
+          "sha256": "TO_PIN",
+          "size_bytes": 0,
+          "mirrors": [],
+          "version_args": ["--version"],
+          "file_name": "yt-dlp.exe"
+        }
+      },
+      "note": "Rolling latest/download URLs are intentional; pin the digest and size for each packaged release."
+    },
+    {
+      "id": "ffmpeg",
+      "name": "FFmpeg",
+      "version": "release-essentials",
+      "license": "GPL-3.0",
+      "distribution": "bundled",
+      "eula_required": false,
+      "platforms": {
+        "macos-aarch64": {
+          "url": "https://ffmpeg.martin-riedl.de/",
+          "sha256": "TO_PIN",
+          "size_bytes": 0,
+          "mirrors": [],
+          "version_args": [],
+          "file_name": "ffmpeg-macos-aarch64.zip",
+          "note": "Packaging entry point only; select and pin the exact macOS arm64 download URL before enabling downloads."
+        },
+        "macos-x86_64": {
+          "url": "https://ffmpeg.martin-riedl.de/",
+          "sha256": "TO_PIN",
+          "size_bytes": 0,
+          "mirrors": [],
+          "version_args": [],
+          "file_name": "ffmpeg-macos-x86_64.zip",
+          "note": "Packaging entry point only; select and pin the exact macOS x86_64 download URL before enabling downloads."
+        },
+        "windows-x86_64": {
+          "url": "https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-essentials.zip",
+          "sha256": "TO_PIN",
+          "size_bytes": 0,
+          "mirrors": [],
+          "version_args": [],
+          "file_name": "ffmpeg-release-essentials.zip"
+        }
+      },
+      "note": "Archives require application-layer extraction after download; this crate deliberately does not execute installers or unpack archives."
+    },
+    {
+      "id": "deno",
+      "name": "Deno",
+      "version": "latest",
+      "license": "MIT",
+      "distribution": "bundled",
+      "eula_required": false,
+      "platforms": {
+        "macos-aarch64": {
+          "url": "https://github.com/denoland/deno/releases/latest/download/deno-aarch64-apple-darwin.zip",
+          "sha256": "TO_PIN",
+          "size_bytes": 0,
+          "mirrors": [],
+          "version_args": []
+        },
+        "macos-x86_64": {
+          "url": "https://github.com/denoland/deno/releases/latest/download/deno-x86_64-apple-darwin.zip",
+          "sha256": "TO_PIN",
+          "size_bytes": 0,
+          "mirrors": [],
+          "version_args": []
+        },
+        "windows-x86_64": {
+          "url": "https://github.com/denoland/deno/releases/latest/download/deno-x86_64-pc-windows-msvc.zip",
+          "sha256": "TO_PIN",
+          "size_bytes": 0,
+          "mirrors": [],
+          "version_args": []
+        }
+      },
+      "note": "Pin a concrete Deno release, digest, and size when producing a bundled installer."
+    },
+    {
+      "id": "ndi-runtime",
+      "name": "NDI Runtime",
+      "version": "6",
+      "license": "Proprietary",
+      "distribution": "download",
+      "eula_required": true,
+      "platforms": {
+        "macos-aarch64": {
+          "url": "https://ndi.link/NDIRedistV6Apple",
+          "sha256": "TO_PIN",
+          "size_bytes": 0,
+          "mirrors": [],
+          "version_args": [],
+          "file_name": "NDIRedistV6Apple.pkg"
+        },
+        "macos-x86_64": {
+          "url": "https://ndi.link/NDIRedistV6Apple",
+          "sha256": "TO_PIN",
+          "size_bytes": 0,
+          "mirrors": [],
+          "version_args": [],
+          "file_name": "NDIRedistV6Apple.pkg"
+        },
+        "windows-x86_64": {
+          "url": "https://ndi.link/NDIRedistV6",
+          "sha256": "TO_PIN",
+          "size_bytes": 0,
+          "mirrors": [],
+          "version_args": [],
+          "file_name": "NDIRedistV6.exe"
+        }
+      },
+      "note": "EULA acceptance is version-specific. Installer execution and any system-level NDI registration remain the application layer's responsibility."
+    },
+    {
+      "id": "libreoffice",
+      "name": "LibreOffice",
+      "version": "latest",
+      "license": "MPL-2.0",
+      "distribution": "download",
+      "eula_required": false,
+      "platforms": {
+        "macos-aarch64": {
+          "url": "https://www.libreoffice.org/download/",
+          "sha256": "TO_PIN",
+          "size_bytes": 0,
+          "mirrors": [],
+          "version_args": [],
+          "file_name": "LibreOffice-macos-aarch64.dmg",
+          "note": "Download portal only; select the current macOS arm64 DMG and pin its digest before production use."
+        },
+        "macos-x86_64": {
+          "url": "https://www.libreoffice.org/download/",
+          "sha256": "TO_PIN",
+          "size_bytes": 0,
+          "mirrors": [],
+          "version_args": [],
+          "file_name": "LibreOffice-macos-x86_64.dmg",
+          "note": "Download portal only; select the current macOS x86_64 DMG and pin its digest before production use."
+        },
+        "windows-x86_64": {
+          "url": "https://www.libreoffice.org/download/",
+          "sha256": "TO_PIN",
+          "size_bytes": 0,
+          "mirrors": [],
+          "version_args": [],
+          "file_name": "LibreOffice-windows-x86_64.msi",
+          "note": "Download portal only; select the current Windows x86_64 MSI and pin its digest before production use."
+        }
+      },
+      "note": "Choose the OS/architecture-appropriate installer at release time; installation itself is application-layer policy."
+    },
+    {
+      "id": "blackhole",
+      "name": "BlackHole",
+      "version": "latest",
+      "license": "GPL-3.0",
+      "distribution": "guided",
+      "eula_required": false,
+      "platforms": {
+        "macos-aarch64": {
+          "url": "https://github.com/ExistentialAudio/BlackHole/releases/latest/download/BlackHole2ch.pkg",
+          "sha256": "TO_PIN",
+          "size_bytes": 0,
+          "mirrors": [],
+          "version_args": []
+        },
+        "macos-x86_64": {
+          "url": "https://github.com/ExistentialAudio/BlackHole/releases/latest/download/BlackHole2ch.pkg",
+          "sha256": "TO_PIN",
+          "size_bytes": 0,
+          "mirrors": [],
+          "version_args": []
+        }
+      },
+      "note": "Guided install only: direct the user to the signed upstream installer and macOS audio-device setup instructions."
+    },
+    {
+      "id": "vb-cable",
+      "name": "VB-CABLE Virtual Audio Device",
+      "version": "43",
+      "license": "donationware",
+      "distribution": "guided",
+      "eula_required": false,
+      "platforms": {
+        "windows-x86_64": {
+          "url": "https://download.vb-audio.com/Download_CABLE/VBCABLE_Driver_Pack43.zip",
+          "sha256": "TO_PIN",
+          "size_bytes": 0,
+          "mirrors": [],
+          "version_args": []
+        }
+      },
+      "note": "Guided install only; the driver package and donationware terms are supplied by VB-Audio."
+    }
+  ]
+}

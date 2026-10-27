@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EventKyu · Stage</title>
+  </head>
+  <body class="stage-body">
+    <main class="stage-screen">
+      <p class="stage-brand">EVENTKYU <span>LIVE</span></p>
+      <div class="stage-cue">
+        <p id="stage-state">STANDBY</p>
+        <h1 id="stage-cue-name">待机</h1>
+        <p id="stage-cue-kind">等待运行中的 Cue</p>
+      </div>
+      <p id="stage-error" class="stage-error" role="status"></p>
+    </main>
+    <script type="module" src="/src/stage.ts"></script>
+  </body>
+</html>

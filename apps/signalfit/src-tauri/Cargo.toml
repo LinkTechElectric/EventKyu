@@ -1,0 +1,25 @@
+[package]
+name = "signalfit"
+version = "0.1.0"
+edition = "2021"
+license = "GPL-3.0-only"
+repository = "https://github.com/LinkTechElectric/EventKyu"
+authors = ["EventKyu contributors"]
+description = "SignalFit offline media toolbox and signal adapter shell"
+build = "build.rs"
+
+# SignalFit is intentionally built outside the parent Cargo workspace.
+[workspace]
+
+[lib]
+name = "signalfit_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[dependencies]
+ai-orchestrator = { path = "../../../core/ai-orchestrator" }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tauri = { version = "2", features = [] }
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }

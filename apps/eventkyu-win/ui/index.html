@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EventKyu · 控制台</title>
+  </head>
+  <body>
+    <header class="app-header">
+      <div>
+        <p class="eyebrow">EVENTKYU / WINDOWS</p>
+        <h1>舞台 Cue 控制台</h1>
+      </div>
+      <div class="header-status">
+        <span id="connection" class="status-pill">连接引擎中</span>
+        <button id="stage-toggle" class="button secondary" type="button">切换 Stage 全屏</button>
+      </div>
+    </header>
+
+    <main class="workspace">
+      <section class="cue-column">
+        <div class="transport panel">
+          <div>
+            <p class="eyebrow">NEXT CUE</p>
+            <h2 id="next-cue">尚未添加 Cue</h2>
+            <p id="clock" class="muted">Engine 0 ms</p>
+          </div>
+          <button id="go" class="go-button" type="button" disabled>
+            <span>GO</span><small>空格键</small>
+          </button>
+        </div>
+
+        <div class="panel cue-panel">
+          <div class="panel-heading">
+            <div><p class="eyebrow">SHOW FLOW</p><h2>Cue 列表</h2></div>
+            <span id="cue-count" class="count">0 CUES</span>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>#</th><th>名称</th><th>类型</th><th>状态</th><th>剩余</th></tr></thead>
+              <tbody id="cue-list"></tbody>
+            </table>
+            <p id="empty-cues" class="empty">从下方添加第一条 Cue，然后按 GO。</p>
+          </div>
+        </div>
+
+        <form id="cue-form" class="panel cue-form">
+          <div class="panel-heading"><div><p class="eyebrow">NEW CUE</p><h2>添加 Cue</h2></div></div>
+          <div class="form-grid">
+            <label>名称<input id="cue-name" required maxlength="120" value="开场" /></label>
+            <label>类型
+              <select id="cue-kind">
+                <option value="video">视频</option>
+                <option value="audio">音频</option>
+                <option value="wait">等待</option>
+              </select>
+            </label>
+            <label id="source-field" class="wide">媒体源<input id="cue-source" value="media/opening.mp4" /></label>
+            <label>时长 ms<input id="cue-duration" type="number" min="0" step="50" value="30000" /></label>
+            <label>Pre-wait ms<input id="cue-pre-wait" type="number" min="0" step="50" value="0" /></label>
+            <label>Post-wait ms<input id="cue-post-wait" type="number" min="0" step="50" value="0" /></label>
+          </div>
+          <button class="button primary" type="submit">添加到列表</button>
+        </form>
+      </section>
+
+      <aside class="side-column">
+        <section class="panel stats-panel">
+          <p class="eyebrow">LIVE STATUS</p>
+          <h2>运行状态</h2>
+          <dl class="stats">
+            <div><dt>Running</dt><dd id="running-count">0</dd></div>
+            <div><dt>Paused</dt><dd id="paused-count">0</dd></div>
+            <div><dt>Completed</dt><dd id="completed-count">0</dd></div>
+          </dl>
+          <p id="last-error" class="error" role="status"></p>
+        </section>
+
+        <section class="panel">
+          <div class="panel-heading"><h2>事件日志</h2><span class="muted">50 ms 轮询</span></div>
+          <pre id="event-log" class="log">等待引擎事件…</pre>
+        </section>
+
+        <details class="panel utility">
+          <summary>下载计划（不执行）</summary>
+          <div class="utility-body">
+            <input id="download-url" type="url" value="https://www.bilibili.com/video/BV1xx411c7XX" aria-label="媒体 URL" />
+            <button id="download-resolve" class="button secondary" type="button">生成 yt-dlp 计划</button>
+            <pre id="download-output" class="output">仅识别平台并返回 argv。</pre>
+          </div>
+        </details>
+
+        <details class="panel utility">
+          <summary>Runtime 离线自检</summary>
+          <div class="utility-body">
+            <button id="runtime-selfcheck" class="button secondary" type="button">运行自检</button>
+            <pre id="runtime-output" class="output">读取真实 manifest；不会联网。</pre>
+          </div>
+        </details>
+      </aside>
+    </main>
+    <script type="module" src="/src/control.ts"></script>
+  </body>
+</html>

@@ -5,6 +5,7 @@ members = [
     "core/download-core",
     "core/runtime-manager",
     "core/ai-orchestrator",
+    "core/eventkyu-uniffi",
     "dsp/audio-dsp",
 ]
 

@@ -1,0 +1,4 @@
+[bindings.swift]
+module_name = "EventKyuCore"
+ffi_module_name = "EventKyuCoreFFI"
+cdylib_name = "eventkyu_uniffi"

@@ -1,0 +1,27 @@
+[package]
+name = "eventkyu-uniffi"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+authors.workspace = true
+description = "UniFFI bindings for the EventKyu cue engine"
+
+[lib]
+name = "eventkyu_uniffi"
+path = "src/lib.rs"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+# 仓库内置绑定生成器，无需额外执行 cargo install。
+[[bin]]
+name = "uniffi-bindgen"
+path = "src/bin/uniffi-bindgen.rs"
+required-features = ["cli"]
+
+[features]
+default = []
+cli = ["uniffi/cli", "uniffi/cargo-metadata"]
+
+[dependencies]
+cue-core = { path = "../cue-core" }
+uniffi = { version = "0.32.2", default-features = false }

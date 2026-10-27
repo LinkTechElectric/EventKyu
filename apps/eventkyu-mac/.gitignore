@@ -1,0 +1,2 @@
+# 本地 Rust 静态库由 scripts/build-core.sh 生成，不进入版本库。
+Sources/EventKyuCoreFFI/libeventkyu_uniffi.a
